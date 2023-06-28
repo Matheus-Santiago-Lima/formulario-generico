@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Genérico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="alert-error">
+        <p>
+            O CPF DEVE TER 11 DÍGITOS
+        </p>
+    </div>
+    <div class="modal-success">
+        <h1>Formulário enviado com sucesso, <span>Matheus</span>!</h1>
+        <br>
+        <p>Obrigado por enviar suas informações.
+            <br> <br><br>
+            <strong>Blessed Bytes Challenge</strong>
+            <br>
+            Igreja Presbiteriana de Boa Viagem
+        </p>
+    </div>
+    <main class="open">
+        <form action="">
+            <fieldset>
+                <h1>
+                    Formulário Genérico
+                </h1>
+            </fieldset>
+            <div class="line">
+                <div class="input-wrapper">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="input-wrapper">
+                    <label for="sobrenome">Sobrenome:</label>
+                    <input type="text" id="sobrenome" required>
+                </div>
+            </div>
+            <div class="line">
+                <div class="input-wrapper">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="input-wrapper">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" maxlength="14" required>
+                </div>
+            </div>
+            <div class="line">
+                <div class="input-wrapper">
+                    <label for="genero">Gênero</label>
+                    <div class="genero">
+                        <label>
+                            <input type="radio" id="generoMas" name="genero" value="masculino" required> Masculino
+                        </label>
+                        <label>
+                            <input type="radio" id="generoFem" name="genero" value="feminino" required> Feminino
+                        </label>
+                    </div>
+                </div>
+                <div class="input-wrapper">
+                    <label for="dataNascimento">Data de Nascimento:</label>
+                    <input type="date" id="dataNascimento" required>
+                </div>
+            </div>
+            <div class="line">
+                <div class="input-wrapper">
+                    <label for="endereço">Endereço:</label>
+                    <input type="text" id="endereço" required>
+                </div>
+                <div class="input-wrapper">
+                    <label for="fone">Número de Telefone:</label>
+                    <input type="text" id="fone" maxlength="15" required>
+                </div>
+            </div>
+            <div class="line">
+                <div class="input-wrapper">
+                    <label for="profissão">Profissão:</label>
+                    <input type="text" id="profissão" required>
+                </div>
+                <div class="input-wrapper">
+                    <label for="informações">Informações Adicionais:</label>
+                    <textarea name="informações" id="informações" placeholder="Se você tiver algo a acrescentar, preencha aqui."></textarea>
+                </div>
+            </div>
+            <div class="line">
+                <div class="input-wrapper">
+                    <label for="estado">Estado:</label>
+                    <select name="estado" id="estado" required>
+                        <option></option>
+                    </select>
+                </div>
+                <div class="input-wrapper">
+                    <label for="cidade">Cidade</label>
+                    <select name="cidade" id="cidade" required>
+                        <option></option>
+                    </select>
+                </div>
+            </div>
+            <div class="line">
+                <div class="input-wrapper">
+                    <label for="senha">Senha:</label>
+                    <div class="password">
+                        <input type="password" id="password" minlength="5" maxlength="30" required>
+                        <img id="eyePassword" src="/images/invisivel.png" alt="olho aberto">
+                    </div>
+                </div>
+                <div class="input-wrapper">
+                    <label for="confirmSenha">Confirmação de Senha:</label>
+                    <div class="password">
+                        <input type="password" id="confirmPassword" minlength="5" maxlength="30" required>
+                        <img id="eyeConfirmPassword" src="/images/invisivel.png" alt="olho aberto" >
+                    </div>
+                </div>
+            </div>
+            <div class="line">
+                <div class="termos">
+                    <p>
+                        Leia e concorde com os <span>termos e condições</span> antes de prosseguir.
+                    </p>
+                </div>
+                <div class="input-wrapper">
+                    <p>Termos e condições:</p>
+                    <div class="checkTermos">
+                        <input type="checkbox" id="checkTermos" required>
+                        <label for="checkTermos">Aceito os termos e condições</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-buttons">
+                <input type="reset" value="Limpar">
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+    </main>
+    <div class="modal-wrapper">
+        <div class="modal-termos">
+            <button>
+                <svg width="10" height="10" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" fill="#ffffff" />
+                </svg>       
+            </button>
+            <h2>Termos de Uso</h2>
+            <p>
+                Bem-vindo! Antes de prosseguir com o uso do nosso formulário, solicitamos que você leia atentamente os termos a seguir. Ao utilizar este formulário, você concorda com todos os termos e condições estabelecidos abaixo:
+            </p>
+            <ol>
+                <li>Uso Responsável: Ao utilizar este formulário, comprometa-se a fornecer informações verdadeiras, precisas e atualizadas. Você é responsável pela veracidade dos dados fornecidos e pelo uso adequado do formulário.</li>
+                <li>Privacidade: Respeitamos sua privacidade e estamos empenhados em proteger suas informações pessoais. Os dados fornecidos neste formulário serão coletados e processados de acordo com a nossa política de privacidade. Não compartilharemos suas informações com terceiros, exceto quando necessário para o processamento e envio do formulário.</li>
+                <li>Propriedade Intelectual: Todo o conteúdo presente neste formulário, incluindo textos, imagens, logotipos e outros elementos, é protegido por direitos autorais e outras leis de propriedade intelectual. É proibida a reprodução, distribuição ou uso não autorizado de qualquer conteúdo presente neste formulário.</li>
+                <li>Responsabilidade: O uso deste formulário é por sua conta em risco. Não nos responsabilizamos por quaisquer danos diretos, indiretos, incidentais, consequenciais ou outros que possam surgir do uso deste formulário. incluindo perda de dados, interrupção do serviço ou qualquer outro tipo de prejuízo.</li>
+                <li>Alterações nos Termos: Podemos modificar esses termos a qualquer momento, sem aviso prévio. Recommendamos que você revise periodicamente os termos para estar ciente de quaisquer alterações. O uso contínuo do formulário após a publicação das alterações constitui sua aceitação dos termos revisados.</li>
+                <li>Encerramento do Acesso: Reservamo-nos o direito de encerrar seu acesso a este foumulário a qualquer momento, por qualquer motivo, sem aviso prévio.</li>
+            </ol>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>

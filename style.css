@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+    --width-colunm: 24rem;
+}
+
+body{
+    height: 100%;
+    font-family: 'arial', sans-serif;
+    background: linear-gradient(135deg,white 50%,rgb(84, 222, 174));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+main{
+    visibility: hidden;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-bottom: 5rem;
+}
+
+fieldset{
+    display: flex;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border: none;
+    justify-content: center;
+}
+
+.line{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+
+label{
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+input, textarea, select{
+    font-family: 'arial', sans-serif;
+    height: 4rem;
+    width: var(--width-colunm);
+    font-size: 1.5rem;
+    border: 2px solid rgb(12, 196, 46);
+    border-radius: 4px;
+    padding-left: 5px;
+    
+}
+
+textarea{
+    height: 6rem;
+}
+
+.genero{
+    display: flex;
+    width:  var(--width-colunm);
+    gap: 2rem;
+    
+}
+
+.genero label{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.genero input{
+    height: 2rem;
+    width: auto;
+
+}
+
+p{
+    font-size: 1.2rem;
+}
+
+.password{
+    display: flex;
+    width: var(--width-colunm);
+    gap: 5px;
+}
+
+img{
+    width: 3.5rem;
+}
+
+.termos{
+    width:  var(--width-colunm);
+}
+
+.termos span{
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.checkTermos{
+    display: flex;
+    gap: 2px;
+}
+
+.checkTermos input{
+    height: 1.5rem;
+    width: auto;
+}
+
+.form-buttons{
+    display: flex;
+    gap: 2rem;
+    justify-content: end;
+}
+
+.form-buttons input{
+    background: rgb(195, 237, 218);
+    height: 4.5rem;
+    width: 15rem;
+    cursor: pointer;
+}
+
+.form-buttons input:hover{
+    background: rgb(171, 229, 204);
+}
+
+.modal-wrapper{
+    position: absolute;
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+.modal-wrapper .modal-termos button{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    border-radius: 9999px;
+    background: black;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;   
+}
+
+.modal-wrapper .modal-termos button:hover{
+    scale: 1.2;
+}
+
+.modal-termos{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    font-size: 1.5rem;
+    background: white;
+    width: 45rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 5px;
+    
+}
+
+.modal-termos p{
+    font-size: 1.5rem;
+}
+
+.modal-termos ol{
+    font-size: 1.3rem;
+    line-height: 2rem;
+    padding-left: 2rem;
+}
+
+.alert-error{
+    position: absolute;
+    background-color: red;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    padding: 5px 0;
+
+    visibility: hidden;
+    transform: translateY(-30px);
+    transition: transform .5s;
+}
+
+.alert-error p{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.modal-success{
+    background: rgba(170, 235, 200, 0.941);
+    width: 35rem;
+    height: auto;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 5px;
+    text-align: center;
+    color: rgb(0, 125, 0);
+    position: absolute;
+
+    visibility: hidden;
+    
+}
+
+.modal-success h1{
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.modal-success p{
+    font-size: 1.5rem;
+}
+
+.open{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.hide{
+    opacity: 0;
+    visibility: hidden;
+}
